@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RGB Line Auth (Animated)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="page">
+    <section class="card rgb-ring" aria-label="RGB line auth card">
+      <header class="head">
+        <div class="brand">
+          <span class="mark">&lt;/&gt;</span>
+          <div>
+            <h1>modern.ui.code</h1>
+            <p>RGB Line Animated Auth</p>
+          </div>
+        </div>
+      </header>
+
+      <nav class="tabs" role="tablist" aria-label="Auth tabs">
+        <button class="tab is-active" data-tab="login" role="tab" aria-selected="true">Login</button>
+        <button class="tab" data-tab="signup" role="tab" aria-selected="false">Sign up</button>
+        <span class="indicator" aria-hidden="true"></span>
+      </nav>
+
+      <div class="panels">
+        <!-- LOGIN -->
+        <form class="panel is-active" id="loginForm" data-form="login" novalidate>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          </label>
+
+          <label class="field">
+            <span>Password</span>
+            <div class="pass">
+              <input type="password" name="password" placeholder="••••••••" autocomplete="current-password" required minlength="6">
+              <button class="icon-btn" type="button" data-eye aria-label="Show password">👁</button>
+            </div>
+          </label>
+
+          <div class="row">
+            <label class="check">
+              <input type="checkbox">
+              <span>Remember</span>
+            </label>
+            <a class="link" href="#" onclick="return false;">Forgot?</a>
+          </div>
+
+          <button class="btn rgb-btn" type="submit">
+            <span class="btn-inner">Login</span>
+          </button>
+
+          <p class="foot">
+            New here?
+            <button class="inline" type="button" data-switch="signup">Create account</button>
+          </p>
+        </form>
+
+        <!-- SIGNUP -->
+        <form class="panel" id="signupForm" data-form="signup" novalidate>
+          <div class="grid2">
+            <label class="field">
+              <span>First name</span>
+              <input type="text" name="firstName" placeholder="Modern" autocomplete="given-name" required>
+            </label>
+            <label class="field">
+              <span>Last name</span>
+              <input type="text" name="lastName" placeholder="Coder" autocomplete="family-name" required>
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          </label>
+
+          <label class="field">
+            <span>Password</span>
+            <div class="pass">
+              <input type="password" name="password" placeholder="6+ characters" autocomplete="new-password" required minlength="6">
+              <button class="icon-btn" type="button" data-eye aria-label="Show password">👁</button>
+            </div>
+          </label>
+
+          <label class="check tmargin">
+            <input type="checkbox" required>
+            <span>I agree to Terms.</span>
+          </label>
+
+          <button class="btn rgb-btn" type="submit">
+            <span class="btn-inner">Create account</span>
+          </button>
+
+          <p class="foot">
+            Already have an account?
+            <button class="inline" type="button" data-switch="login">Login</button>
+          </p>
+        </form>
+      </div>
+
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+      <footer class="meta">
+        <span>RGB Line</span><span class="dot">•</span><span>HTML/CSS/JS</span>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
